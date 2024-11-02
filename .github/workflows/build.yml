@@ -7,6 +7,9 @@ on:
       matrix-ghc:
         required: true
         type: string
+      matrix-os:
+        required: true
+        type: string
 
 jobs:
   build:
@@ -14,7 +17,7 @@ jobs:
       fail-fast: false
       matrix:
         ghc: ${{ fromJson(inputs.matrix-ghc) }}
-        os: ['ubuntu-latest', 'macos-latest']
+        os: ${{ fromJson(inputs.matrix-os) }}
     runs-on: ${{ matrix.os }}
 
     name: GHC ${{ matrix.ghc }} on ${{ matrix.os }}
