@@ -2,12 +2,11 @@ name: Reusable haskell build workflow
 
 on:
   workflow_call:
-
-# https://github.com/orgs/community/discussions/11692
-inputs:
-  matrix-ghc:
-    required: true
-    type: string
+    # https://github.com/orgs/community/discussions/11692
+    inputs:
+      matrix-ghc:
+        required: true
+        type: string
 
 jobs:
   build:
