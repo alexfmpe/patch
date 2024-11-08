@@ -30,7 +30,7 @@ import Data.Semigroup (Semigroup (..))
 
 -- N.B. Intentionally reexporting `Additive`, the deprecated alias, as
 -- this is a reexport for backwards compatibility.
-import qualified Data.Semigroup.Additive as X
+import Data.Semigroup.Additive as X
 import Data.Patch.Class as X
 import Data.Patch.DMap as X hiding (getDeletions)
 import Data.Patch.DMapWithMove as X
